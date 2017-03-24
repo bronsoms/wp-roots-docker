@@ -1,0 +1,11 @@
+version: '2'
+services:
+  web:
+    container_name: wp_roots_docker
+    build:
+      context: docker
+    ports:
+      - "8888:80"
+    tty: true
+    volumes:
+      - ./site:/var/www
